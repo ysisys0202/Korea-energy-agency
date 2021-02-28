@@ -4,8 +4,13 @@ html {
   font-size: 10px;
 }
 body {
+  overflow: hidden;
+  height: 100vh;
   @include font-default;
   color: #fff;
+}
+.container {
+  transition: 0.5s;
 }
 /*font*/
 .content-title {
