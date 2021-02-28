@@ -1,0 +1,61 @@
+//color-setting
+$color-white: #ffffff;
+$color-black: #232323;
+$color-grey-01: #363636;
+$color-grey-02: #77777a;
+$color-grey-03: #959599;
+$color-grey-04: #b4b4b6;
+$color-grey-05: #c6c6c8;
+$color-grey-06: #ebebeb;
+$color-brand-default: #005baa;
+$color-brand-second: #3d6abd;
+//font-setting
+// font-size
+@mixin font-default {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.875;
+  color: $color-black;
+}
+//lh => xxl:80px, xl:80px, lg:40px md:40px, sm:30px, xs:30px, xxs:20px, 3xs:20px
+@mixin font-xxl($fz: 7.2rem, $fw: 700, $lh: 1.11) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+@mixin font-xl($fz: 4.8rem, $fw: 700, $lh: 1.667) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+@mixin font-lg($fz: 3.6rem, $fw: 700, $lh: 2.22) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+@mixin font-md($fz: 2.4rem, $fw: 700, $lh: 1.667) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+@mixin font-sm($fz: 18px, $fw: 400, $lh: 1.875) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+@mixin font-xs($fz: 16px, $fw: 400, $lh: 1.875) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+@mixin font-xxs($fz: 14px, $fw: 400, $lh: 1.43) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}
+@mixin font-3xs($fz: 12px, $fw: 400, $lh: 1.67) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+}

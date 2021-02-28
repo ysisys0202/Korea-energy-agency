@@ -1,0 +1,185 @@
+/*content*/
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /*30px / 1920px * 100*/
+  padding: 0 1.56%;
+  height: 100vh; }
+  .content .content-header .btn {
+    margin-top: 160px; }
+  .content .content-body {
+    display: flex;
+    align-items: center;
+    margin-right: 120px; }
+
+/*intro*/
+.intro {
+  background-image: url(../images/bgi/bgi-section-1-1.jpg); }
+
+/*renewal-energy*/
+.renewal-energy {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../images/bgi/bgi-section_2.jpg); }
+  .renewal-energy .content-article {
+    position: relative;
+    padding: 40px 0;
+    width: 320px;
+    height: 360px;
+    transform: translateY(0);
+    transition: 0.5s; }
+  .renewal-energy .content-article:nth-child(odd) {
+    background-color: rgba(19, 126, 182, 0.4); }
+  .renewal-energy .content-article:nth-child(even) {
+    background-color: rgba(61, 101, 189, 0.4); }
+  .renewal-energy .content-article:hover {
+    background-color: #137eb6;
+    transform: translateY(-5%); }
+  .renewal-energy .content-article:nth-child(even):hover {
+    background-color: #3d65bd;
+    transform: translateY(-5%); }
+  .renewal-energy .content-article:first-of-type ~ .content-article {
+    margin-left: 45px; }
+  .renewal-energy .article-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.667;
+    text-align: center; }
+  .renewal-energy .article-title span {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.11; }
+  .renewal-energy .article-desc {
+    margin-top: 50px;
+    padding: 0 20px; }
+  .renewal-energy .img-wrapper {
+    position: absolute;
+    right: 30px;
+    bottom: 30px; }
+
+/*energy-efficiency*/
+.energy-efficiency {
+  background-image: url(../images/bgi/bgi-section_3.jpg); }
+  .energy-efficiency .content-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    width: 180px;
+    height: 240px;
+    background-color: rgba(80, 172, 255, 0.6); }
+  .energy-efficiency .content-article {
+    margin-left: 25px; }
+  .energy-efficiency .article-title {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2.22; }
+  .energy-efficiency .count-value {
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 1.11; }
+  .energy-efficiency .data-unit {
+    font-size: 18px; }
+
+/*climate-change-response*/
+.climate-change-response {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../images/bgi/bgi-section_4.jpg); }
+  .climate-change-response .content-header .btn {
+    background-color: #412e16; }
+  .climate-change-response .content-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 140px;
+    border: 5px solid #b4c490;
+    background-color: rgba(65, 46, 22, 0.5); }
+  .climate-change-response .content-article:first-of-type ~ .content-article {
+    margin-left: 45px; }
+  .climate-change-response .article-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.667;
+    text-align: center; }
+  .climate-change-response .circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    transform: rotate(0);
+    transition: 1s; }
+  .climate-change-response .circle::before,
+  .climate-change-response .circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: #b4c490; }
+  .climate-change-response .circle::before {
+    top: -10px; }
+  .climate-change-response .circle::after {
+    bottom: -10px; }
+  .climate-change-response .content-article:hover .circle {
+    transform: rotate(90deg); }
+
+/*info*/
+.info {
+  background-image: url(../images/bgi/bgi-section_5.jpg);
+  color: #000; }
+  .info .content-article {
+    padding: 0 10px;
+    border-top: 2px solid #000;
+    width: 260px; }
+  .info .content-article:first-of-type ~ .content-article {
+    margin-left: 30px; }
+  .info .article-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.5;
+    text-align: center; }
+  .info .info-item:first-of-type ~ .info-item {
+    margin-top: 10px; }
+  .info .info-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.25; }
+  .info .info-date {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.67; }
+  .info .info-more {
+    display: block;
+    text-align: right;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.875; }
+  .info .arrow-icon {
+    display: inline;
+    margin-left: 10px;
+    width: 25px;
+    height: 12px;
+    transition: 0.5s; }
+  .info .info-more:hover .arrow-icon {
+    transform: translateX(10px); }
+  .info .scroll-line,
+  .info .scroll-line::after {
+    background-color: #000; }

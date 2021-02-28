@@ -1,0 +1,213 @@
+@import "./variable.scss";
+/*content*/
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /*30px / 1920px * 100*/
+  padding: 0 1.56%;
+  height: 100vh;
+  .content-header {
+    .btn {
+      margin-top: 160px;
+    }
+  }
+  .content-body {
+    display: flex;
+    align-items: center;
+    margin-right: 120px;
+  }
+}
+/*intro*/
+.intro {
+  background-image: url(../images/bgi/bgi-section-1-1.jpg);
+}
+/*renewal-energy*/
+.renewal-energy {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../images/bgi/bgi-section_2.jpg);
+  .content-article {
+    position: relative;
+    padding: 40px 0;
+    width: 320px;
+    height: 360px;
+    transform: translateY(0);
+    transition: 0.5s;
+  }
+  .content-article:nth-child(odd) {
+    background-color: rgba(19, 126, 182, 0.4);
+  }
+  .content-article:nth-child(even) {
+    background-color: rgba(61, 101, 189, 0.4);
+  }
+  .content-article:hover {
+    background-color: rgba(19, 126, 182, 1);
+    transform: translateY(-5%);
+  }
+  .content-article:nth-child(even):hover {
+    background-color: rgba(61, 101, 189, 1);
+    transform: translateY(-5%);
+  }
+  .content-article:first-of-type ~ .content-article {
+    margin-left: 45px;
+  }
+  .article-title {
+    @include font-md;
+    text-align: center;
+  }
+  .article-title span {
+    display: block;
+    @include font-sm($fw: 700, $lh: 1.11);
+  }
+  .article-desc {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+  .img-wrapper {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+}
+/*energy-efficiency*/
+.energy-efficiency {
+  background-image: url(../images/bgi/bgi-section_3.jpg);
+  .content-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    width: 180px;
+    height: 240px;
+    background-color: rgba(80, 172, 255, 0.6);
+  }
+  .content-article {
+    margin-left: 25px;
+  }
+  .article-title {
+    margin-top: 20px;
+    @include font-sm($fw: 700, $lh: 2.22);
+  }
+  .data-value {
+  }
+  .count-value {
+    @include font-lg($fw: 500, $lh: 1.11);
+  }
+  .data-unit {
+    font-size: 18px;
+  }
+}
+/*climate-change-response*/
+.climate-change-response {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../images/bgi/bgi-section_4.jpg);
+  .content-header {
+    .btn {
+      background-color: #412e16;
+    }
+  }
+
+  .content-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 140px;
+    border: 5px solid rgba(180, 196, 144, 05);
+    background-color: rgba(65, 46, 22, 0.5);
+  }
+  .content-article:first-of-type ~ .content-article {
+    margin-left: 45px;
+  }
+  .article-title {
+    @include font-md;
+    text-align: center;
+  }
+  .circle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    transform: rotate(0);
+    transition: 1s;
+  }
+  .circle::before,
+  .circle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: rgba(180, 196, 144, 05);
+  }
+  .circle::before {
+    top: -10px;
+  }
+  .circle::after {
+    bottom: -10px;
+  }
+  .content-article:hover .circle {
+    transform: rotate(90deg);
+  }
+}
+/*info*/
+.info {
+  background-image: url(../images/bgi/bgi-section_5.jpg);
+  color: #000;
+  .content-article {
+    padding: 0 10px;
+    border-top: 2px solid #000;
+    width: 260px;
+  }
+  .content-article:first-of-type ~ .content-article {
+    margin-left: 30px;
+  }
+  .article-title {
+    @include font-md($lh: 2.5);
+    text-align: center;
+  }
+  .info-item:first-of-type ~ .info-item {
+    margin-top: 10px;
+  }
+  .info-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    @include font-xs($lh: 1.25);
+  }
+  .info-date {
+    @include font-3xs;
+  }
+  .info-more {
+    display: block;
+    text-align: right;
+    margin-top: 40px;
+    @include font-sm($fw: 700);
+  }
+  .arrow-icon {
+    display: inline;
+    margin-left: 10px;
+    width: 25px;
+    height: 12px;
+    transition: 0.5s;
+  }
+  .info-more:hover .arrow-icon {
+    transform: translateX(10px);
+  }
+
+  .scroll-line,
+  .scroll-line::after {
+    background-color: #000;
+  }
+}
