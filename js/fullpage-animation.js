@@ -46,22 +46,35 @@ const paginationHandler = (e) => {
   const targetItem = e.target;
   const targetIdx = targetItem.dataset.index;
   inactiveElement(paginationItems);
+
   if (targetItem.classList.contains("content-pagination-item")) {
-    activateElement(targetIdx, paginationItems);
+    contentIdx = targetIdx;
+    changeContent(targetIdx);
   }
-  contentIdx = targetIdx;
-  changeContent(targetIdx);
+  inactiveElement(contents);
+  activateElement(contentIdx, contents);
+  inactiveElement(paginationItems);
+  activateElement(contentIdx, paginationItems);
 };
 
 const wheelHandler = (e) => {
   wheelDelta = e.deltaY;
   //휠하면 콘텐츠 바뀜
   if (flag === true) {
-    if (wheelDelta > 0 && contentIdx < contents.length - 1) {
-      goToNextContent();
-    } else if (wheelDelta < 0 && contentIdx > 0) {
-      goToPrevContent();
-    }
+    if (wheelDelta > 0) {
+      if (contentIdx < contents.length - 1) {
+        goToNextContent();
+      } else if (contentIdx === contents.length - 1) {
+        container.style.transform = `translateY(calc${
+          -100 * contentIdx
+        }vh - ${footerHeight}px)`;
+        flag = false;
+      }
+    } else if (wheelDelta < 0) {
+      if (contentIdx > 0) {
+        goToPrevContent();
+      }
+    } //else if (wheelDelta < 0 && contentIdx  0)
   }
   container.addEventListener("transitionend", () => {
     flag = true;
