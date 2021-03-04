@@ -2,7 +2,6 @@
 {
   const energyEfficiency = document.querySelector(".energy-efficiency");
   const countValues = document.querySelectorAll(".count-value");
-  console.log(countValues);
   let countingNumber = 0;
   let flag = true;
 
@@ -16,10 +15,11 @@
           clearInterval(counter);
         }
       }, 1);
+      flag = false;
     });
   };
   const wheelHandler = () => {
-    if (energyEfficiency.classList.contains("active")) {
+    if (flag && energyEfficiency.classList.contains("active")) {
       updateCounter();
     }
   };
