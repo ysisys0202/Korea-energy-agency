@@ -177,7 +177,8 @@ li {
   padding: 0 1.56%;
   width: 100%;
   height: 100px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 200ms ease-in-out; }
   .global-header .header-logo > a {
     padding: 0 30px 0 29px; }
   .global-header .header-logo-img {
@@ -198,15 +199,28 @@ li {
     bottom: -1px;
     left: 0;
     width: 100%;
-    height: 0px;
-    background-color: #005baa; }
+    height: 3px;
+    background-color: #005baa;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out; }
   .global-header .global-nav-item:hover::after {
-    height: 3px; }
+    opacity: 1; }
   .global-header .global-nav-item > a {
     font-size: 18px;
     font-weight: 400;
     line-height: 5.5;
     color: #fff; }
+  .global-header:hover {
+    border-color: transparent;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(15px);
+    -moz-backdrop-filter: saturate(180%) blur(15px);
+    -o-backdrop-filter: saturate(180%) blur(15px);
+    backdrop-filter: saturate(180%) blur(15px); }
+    .global-header:hover .global-nav-item > a {
+      color: #363636; }
+    .global-header:hover .global-nav-item:hover > a {
+      color: #005baa; }
   .global-header .dropdown {
     position: relative; }
     .global-header .dropdown-list {
@@ -214,6 +228,7 @@ li {
       position: absolute;
       top: 100%;
       left: 0;
+      z-index: 10;
       width: 100%;
       padding: 30px 0 0 20px;
       transition: visibility 100ms ease-in-out; }
