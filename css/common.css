@@ -191,7 +191,8 @@ li {
   .global-header .global-nav-item {
     position: relative;
     padding: 0 30px;
-    text-align: center; }
+    text-align: center;
+    white-space: nowrap; }
   .global-header .global-nav-item::after {
     content: "";
     display: block;
