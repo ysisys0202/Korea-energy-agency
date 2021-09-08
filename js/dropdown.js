@@ -11,22 +11,13 @@ function inactivateDropdown() {
   nav.classList.remove("is-active");
   overlay.classList.remove("is-active");
 }
-function navMouseOverHandler(e) {
-  const target = e.target;
-  if (target.matches(".dropdown")) {
-    activateDropdown();
-  }
-}
-function navMouseLeaveHandler() {
-  inactivateDropdown();
-}
-function overlayMouseOverHandler() {
+function navOverHandler() {
   activateDropdown();
 }
-function overlayMouseLeaveHandler() {
+function navLeaveHandler() {
   inactivateDropdown();
 }
-nav.addEventListener("mouseover", navMouseOverHandler);
-nav.addEventListener("mouseleave", navMouseLeaveHandler);
-overlay.addEventListener("mouseover", overlayMouseOverHandler);
-overlay.addEventListener("mouseleave", overlayMouseLeaveHandler);
+nav.addEventListener("mouseover", navOverHandler);
+nav.addEventListener("mouseleave", navLeaveHandler);
+overlay.addEventListener("mouseover", navOverHandler);
+overlay.addEventListener("mouseleave", navLeaveHandler);
